@@ -11,6 +11,7 @@ namespace Proiect_TP.Controllers
     public class UserController : Controller
     {
         UserBLL userService = new UserBLL();
+        ScoreBLL scoreService = new ScoreBLL();
         // GET: User
         public ActionResult Index()
         {
@@ -29,8 +30,12 @@ namespace Proiect_TP.Controllers
         {
             if (TryUpdateModel<User>(user))
             {
+                Score score = new Score();
                 user.Id = Guid.NewGuid();
+                score.id = user.Id;
+                score.scor_list.Add(0);
                 userService.AddUser(user);
+                scoreService.Addscore(score);
             }
             return RedirectToAction("Index");
         }

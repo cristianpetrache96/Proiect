@@ -6,21 +6,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace Proiect_TP.Models
+
 {
-    [Table("User")]
-    public class User
+    [Table("Score")]
+    public class Score
     {
         [Key,Required]
-        public Guid Id{ get; set; }
+        public Guid id { get; set; }
 
-        public String Name { get; set; }
+        public List<long> scor_list{get; set;}
 
-        [EmailAddress]
-        public String Email { get; set; }
 
-        public String Password { get; set; }
-
-       
 
     }
 }
