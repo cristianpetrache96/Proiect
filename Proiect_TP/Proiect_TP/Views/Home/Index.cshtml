@@ -2,42 +2,18 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<style>
-    .jumbotron{
-        background-color: cornsilk
-    }
-    .container {
-/*       border: 3px solid red;*/
-        
-    }
-
-    .center {
-        margin: 20% 0 0 30%;
-        border: 3px solid green;
-        text-align: center;
-        width: 40%;
-        height: 40%;
-    }
-    .sigla {
-        max-width:220px;
-        height:200px;
-        background-position: center;
-        background-attachment: fixed;
-        background-image: url("C://Users//Catalin//Desktop//cal.png");
-        
-    }
-    .body {
-        border: 3px solid blue;
-    }
-
-
-</style>
 <div class="container" >
-    <div class="center">
-        <div class="sigla"></div>
-        <img src=@Url.Content("C://Users//Catalin//Desktop//cal.png") />
+    <div class="bla">
+        <img src=@Url.Content("../../cal.png") />
      </div>
-        <div class="center" style="margin-top:0">
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+        <div class="bla" style="margin-top:0">
             <div class="form-horizontal">
                 <h4>Login</h4>
                 <hr />
@@ -61,12 +37,13 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Ok" class="btn btn-default" />
+                        <input type="submit" value="Ok" class="btn btn-default"  />
                     </div>
                 </div>
             </div>
             </div>
 </div>
-    
+
+
 
 

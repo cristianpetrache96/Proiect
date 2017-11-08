@@ -147,6 +147,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ChessGameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DBContext\Context.cs" />
@@ -159,6 +160,7 @@
       <DependentUpon>201710261547142_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ChessGame.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Proiect_TP.BLL\UserBLL.cs" />
     <Compile Include="Proiect_TP.DAL\UserDAL.cs" />
@@ -206,10 +208,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\ChessGame\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Abstract\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
