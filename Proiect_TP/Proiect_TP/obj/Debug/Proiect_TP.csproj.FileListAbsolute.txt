@@ -144,3 +144,6 @@ E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateR
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
+X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.config
+X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.dll
+X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.xml
