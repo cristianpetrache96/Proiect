@@ -67,5 +67,10 @@ namespace Proiect_TP.Models
         {
             return "" + this.Row + this.Col;
         }
+
+        public bool IsEmpty()
+        {
+            return _piece == null || _piece.Type == Piece.PieceType.Empty;
+        }
     }
 }

@@ -12,5 +12,35 @@ namespace Proiect_TP.Models
         PieceType _type;
 
         public enum PieceType { Empty, King, Queen, Rook, Bishop, Knight, Pawn };
+
+
+        public PieceType Type
+        {
+            get
+            {
+                return _type;
+            }
+            set
+            {
+                _type = value;
+            }
+        }
+
+        public Side Side
+        {
+            get
+            {
+                return _side;
+            }
+            set
+            {
+                _side = value;
+            }
+        }
+
+
+
     }
+
+    
 }

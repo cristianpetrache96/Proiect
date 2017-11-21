@@ -15,9 +15,48 @@ namespace Proiect_TP.Models
         public ChessGame(User user1,User user2)
         {
             _chessBoard = new ChessBoard();
-            _whitePlayer = new Player(user1, new Side(Side.SideType.White));
-            _blackPlayer = new Player(user2, new Side(Side.SideType.Black));
+            _whitePlayer = (Player)user1;
+     
+            _blackPlayer = (Player)user2; 
         }
 
+
+        public Player WhitePlayer
+        {
+            get
+            {
+                return _whitePlayer;
+            }
+        }
+
+
+        public Player BlackPlayer
+        {
+            get
+            {
+                return _blackPlayer;
+            }
+        }
+
+        public Player CurrentPlayer
+        {
+            get
+            {
+                if (BlackTurn())
+                    return _blackPlayer;
+                else
+                    return _whitePlayer;
+            }
+        }
+
+        public bool BlackTurn()
+        {
+            return (_gameTurn == Side.SideType.Black);
+        }
+
+        public bool WhiteTurn()
+        {
+            return (_gameTurn == Side.SideType.White);
+        }
     }
 }

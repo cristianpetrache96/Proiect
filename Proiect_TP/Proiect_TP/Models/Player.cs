@@ -5,22 +5,15 @@ using System.Web;
 
 namespace Proiect_TP.Models
 {
-    public class Player
+    public class Player:User
     {
-        private User _user;
+        
         private Side _side;
 
-        public Player(User user, Side side)
+        public Player( Side side)
         {
             _side = side;
-            _user = user;
+        
         }
-
-        public Player(Side side)
-        {
-            _side = side;
-        }
-
-
     }
 }
