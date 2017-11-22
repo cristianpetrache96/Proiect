@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\ApplicationInsights.config
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe.config
@@ -70,6 +72,7 @@ X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreate.resources
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
+>>>>>>> 123fbc08fb51ffb797583893ba5d79da9081dc16
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\ApplicationInsights.config
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe.config
@@ -142,7 +145,10 @@ E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.Initi
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
+<<<<<<< HEAD
+=======
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.config
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.dll
 X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.xml
+>>>>>>> 123fbc08fb51ffb797583893ba5d79da9081dc16
