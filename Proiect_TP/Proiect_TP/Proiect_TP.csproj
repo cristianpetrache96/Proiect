@@ -181,6 +181,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\black_bishop.png" />
+    <Content Include="Images\black_king.png" />
+    <Content Include="Images\black_knight.png" />
+    <Content Include="Images\black_pawn.png" />
+    <Content Include="Images\black_queen.png" />
+    <Content Include="Images\black_rook.png" />
+    <Content Include="Images\white_bishop.png" />
+    <Content Include="Images\white_king.png" />
+    <Content Include="Images\white_knight.png" />
+    <Content Include="Images\white_pawn.png" />
+    <Content Include="Images\white_queen.png" />
+    <Content Include="Images\white_rook.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -219,11 +231,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\ChessGame\View.cshtml" />
+    <Content Include="Views\ChessGame\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>

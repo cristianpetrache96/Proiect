@@ -8,46 +8,17 @@ namespace Proiect_TP.Models
     public class Cell
     {
         Piece _piece;
-        int _row;
-        int _col;
+     
 
 
         public Cell()
         {
-            _row = 0;
-            _col = 0;
+            _piece = null;
         }
 
-        public Cell(int row, int col)
+        public Cell(Piece piece)
         {
-            _row = row;
-            _col = col;
-        }
-
-        public int Row
-        {
-            get
-            {
-                return _row;
-            }
-
-            set
-            {
-                _row = value;
-            }
-        }
-
-        public int Col
-        {
-            get
-            {
-                return _col;
-            }
-
-            set
-            {
-                _col = value;
-            }
+            _piece = piece;
         }
 
         public Piece Piece
@@ -61,11 +32,6 @@ namespace Proiect_TP.Models
             {
                 _piece = value;
             }
-        }
-
-        public string GetKey()
-        {
-            return "" + this.Row + this.Col;
         }
 
         public bool IsEmpty()

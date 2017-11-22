@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Proiect_TP.Models;
+using System.Drawing;
 
 namespace UnitTestProject1
 {
@@ -22,6 +23,18 @@ namespace UnitTestProject1
             };
 
             ChessGame chessgame = new ChessGame(user1, user2);
+        }
+        [TestMethod]
+        public void TestBoard()
+        {
+            ChessBoard board = new ChessBoard();
+
+            Cell cell = board.GetCell("a1");
+            Bitmap img = (Bitmap)Image.FromFile(cell.Piece.ImagePath);
+
+
+
+            
         }
     }
 }

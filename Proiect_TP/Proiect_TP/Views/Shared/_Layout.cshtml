@@ -27,7 +27,7 @@ background-repeat:no-repeat;
                     @if (Session["User"] == null)
                     {
                         <li>@Html.ActionLink("CreateUser", "Create", "User")</li>
-                        <li>@Html.ActionLink("Log in","Index","Home")</li>
+                        <li>@Html.ActionLink("Log in","Index","Home")</li>      
                     }
                     else
                     {

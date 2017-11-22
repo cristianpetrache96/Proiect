@@ -20,5 +20,13 @@ namespace Proiect_TP.Models
             _side = side;
         }
 
+
+        public SideType SideTip
+        {
+            get
+            {
+                return _side;
+            }
+        }
     }
 }
