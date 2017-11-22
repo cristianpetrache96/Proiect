@@ -231,13 +231,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\ChessGame\View.cshtml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-=======
     <Content Include="Views\ChessGame\Index.cshtml" />
->>>>>>> 123fbc08fb51ffb797583893ba5d79da9081dc16
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
