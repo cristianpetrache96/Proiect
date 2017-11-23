@@ -1,19 +1,37 @@
-﻿@model Proiect_TP.Models.User
+﻿@model Proiect_TP.Models.ChessGame
 @{
 
     ViewBag.Title = "Index";
-    // Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
-    a {
+    a[rel = table] {
         color: #000;
         display: block;
         font-size: 60px;
-        height: 80px;
+        height: 80px;    
+        
 
     }
 
+        a[rel=fancybox] {
+            display: block;
+            background: url('../../Images/black_rook.png') no-repeat 0 0 transparent;
+            height: 80px;
+            background-position:center;
+           
+         
+        }
+
+            a[rel=fancybox]:hover {
+                background: url('../../Images/white_rook.png') no-repeat 0 0 transparent;
+                background-position: center;
+            }
+        a:hover {
+            color: #ffd800;
+            display: block;
+        }
     #chess_board {
         border: 5px solid #333;
     }
@@ -25,94 +43,107 @@
             text-align: center;
             vertical-align: middle;
             width: 80px;
+           
         }
 
         #chess_board tr:nth-child(odd) td:nth-child(even),
         #chess_board tr:nth-child(even) td:nth-child(odd) {
             background: #ccc;
+            
         }
 </style>
+<br />
+<br />
+<br />
+<br />
 
 <table id="chess_board" cellpadding="0" cellspacing="0" style=" margin: 2% 0 0 25%; border: 3px solid green;">
     <tr>
-        <td id="A8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9820;</a></td>
-        <td id="B8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9822;</a></td>
-        <td id="C8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9821;</a></td>
-        <td id="D8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9819;</a></td>
-        <td id="E8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9818;</a></td>
-        <td id="F8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9821;</a></td>
-        <td id="G8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9822;</a></td>
-        <td id="H8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9820;</a></td>
+       <!-- Html.RadioButtonFor(model => model.BlackPlayer); -->
+       
+        @*<td id="A8"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9820;</a></td>*@
+        <td id="A8"><a href="#" rel="fancybox"></a>@*<a href="#" onclick="location.href='@Url.Action("About", "Home")'"><img src="@Model.Board.GetCell("a8").Piece.ImagePath" /></a>*@</td>
+        <td id="B8"><a href="#" rel ="table"onclick="location.href='@Url.Action("About", "Home")'">&#9822;</a></td>
+        <td id="C8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9821;</a></td>
+        <td id="D8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9819;</a></td>
+        <td id="E8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9818;</a></td>
+        <td id="F8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9821;</a></td>
+        <td id="G8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9822;</a></td>
+        <td id="H8"><a href="#" rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9820;</a></td>
     </tr>
     <tr>
-        <td id="A7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="B7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="C7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="D7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="E7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="F7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="G7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
-        <td id="H7"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="A7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="B7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="C7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="D7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="E7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="F7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="G7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
+        <td id="H7"><a href="#"rel="table" onclick="location.href='@Url.Action("About", "Home")'">&#9823;</a></td>
     </tr>
     <tr>
-        <td id="A6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="B6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="C6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="D6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="E6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="F6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="G6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="H6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="A6"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">
+            @if (@Model.Board.GetCell("a6").Piece.ImagePath != null)
+            {
+                <img src=" @Model.Board.GetCell("a6").Piece.ImagePath" />
+            }</a></td>
+        <td id="B6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="C6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="D6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="E6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="F6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="G6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="H6"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
     </tr>
     <tr>
-        <td id="A5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="B5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="C5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="D5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="E5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="F5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="G5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="H5"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="A5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="B5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="C5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="D5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="E5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="F5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="G5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="H5"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
     </tr>
     <tr>
-        <td id="A4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="B4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="C4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="D4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="E4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="F4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="G4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="H4"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="A4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="B4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="C4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="D4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="E4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="F4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="G4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="H4"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
     </tr>
     <tr>
-        <td id="A3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="B3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="C3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="D3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="E3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="F3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="G3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
-        <td id="H3"><a href="#" onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="A3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="B3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="C3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="D3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="E3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="F3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="G3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
+        <td id="H3"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'"></a></td>
     </tr>
     <tr>
-        <td id="A2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'" >&#9817;</a></td>
-        <td id="B2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="C2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="D2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="E2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="F2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="G2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
-        <td id="H2"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="A2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'" >&#9817;</a></td>
+        <td id="B2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="C2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="D2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="E2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="F2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="G2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
+        <td id="H2"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9817;</a></td>
     </tr>
     <tr>
-        <td id="A1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9814;</a></td>
-        <td id="B1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9816;</a></td>
-        <td id="C1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9815;</a></td>
-        <td id="D1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9813;</a></td>
-        <td id="E1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9812;</a></td>
-        <td id="F1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9815;</a></td>
-        <td id="G1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9816;</a></td>
-        <td id="H1"><a href="#" onclick="location.href='@Url.Action("About", "Home")'">&#9814;</a></td>
+        <td id="A1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9814;</a></td>
+        <td id="B1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9816;</a></td>
+        <td id="C1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9815;</a></td>
+        <td id="D1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9813;</a></td>
+        <td id="E1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9812;</a></td>
+        <td id="F1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9815;</a></td>
+        <td id="G1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9816;</a></td>
+        <td id="H1"><a href="#"rel="table"onclick="location.href='@Url.Action("About", "Home")'">&#9814;</a></td>
     </tr>
 
 

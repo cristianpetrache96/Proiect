@@ -152,6 +152,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ChessGameController.cs" />
+    <Compile Include="Controllers\ChessGameLobbyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DBContext\Context.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\ChessBoard.cs" />
     <Compile Include="Models\ChessGame.cs" />
+    <Compile Include="Models\ChessGameLobby.cs" />
     <Compile Include="Models\Piece.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Score.cs" />
@@ -191,6 +193,7 @@
     <Content Include="Images\black_pawn.png" />
     <Content Include="Images\black_queen.png" />
     <Content Include="Images\black_rook.png" />
+    <Content Include="Images\lobby_logo.png" />
     <Content Include="Images\white_bishop.png" />
     <Content Include="Images\white_king.png" />
     <Content Include="Images\white_knight.png" />
@@ -236,6 +239,7 @@
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\ChessGame\Index.cshtml" />
+    <Content Include="Views\ChessGameLobby\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

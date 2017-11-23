@@ -12,6 +12,10 @@ namespace Proiect_TP.Models
         private Player _whitePlayer;
         private Player _blackPlayer;
 
+        public ChessGame()
+        {
+            _chessBoard = new ChessBoard();
+        }
         public ChessGame(User user1,User user2)
         {
             _chessBoard = new ChessBoard();
@@ -57,6 +61,14 @@ namespace Proiect_TP.Models
         public bool WhiteTurn()
         {
             return (_gameTurn == Side.SideType.White);
+        }
+
+        public ChessBoard Board
+        {
+            get
+            {
+                return _chessBoard;
+            }
         }
     }
 }

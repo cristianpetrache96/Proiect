@@ -84,6 +84,7 @@ namespace Proiect_TP.Models
             return (Cell)_cells[key];
         }
 
+
         public void RemoveCell(Cell cell)
         {
             if (_cells.Contains(cell))

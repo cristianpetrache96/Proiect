@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Proiect_TP.Models;
 
 namespace Proiect_TP.Controllers
 {
-    public class ChessGameController : Controller
+    public class ChessGameLobbyController : Controller
     {
-        // GET: ChessGame
+        // GET: ChessGameLobby
         public ActionResult Index()
         {
-            return View(new ChessGame());
+            return View();
         }
     }
 }

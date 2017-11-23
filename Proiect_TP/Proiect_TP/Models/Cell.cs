@@ -13,7 +13,7 @@ namespace Proiect_TP.Models
 
         public Cell()
         {
-            _piece = null;
+            _piece = new Piece();
         }
 
         public Cell(Piece piece)
