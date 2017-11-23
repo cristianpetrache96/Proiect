@@ -1,3 +1,6 @@
+E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
+E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreate.resources
+E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\ApplicationInsights.config
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe.config
@@ -69,8 +72,5 @@ E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.DependencyCollector.
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.WindowsServer.xml
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.Web.xml
-E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreate.resources
-E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
-E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
