@@ -79,11 +79,137 @@ namespace Proiect_TP.Models
 
         }
 
+        public string GetKey(Cell cell)
+        {
+            return _cells.Keys.OfType<String>().FirstOrDefault(s => _cells[s] == cell);
+        }
+
         public Cell GetCell(string key)
         {
             return (Cell)_cells[key];
         }
 
+        public string CellKeyFromRowAndCol(int row, int col)
+        {
+            string key;
+
+            key = Convert.ToString(Convert.ToChar(col + 64));
+            key += row.ToString();
+
+            return key;
+        }
+
+        public List<int> RowAndColFromCellKey(string key)
+        {
+            List<int> rowAndCol = new List<int>();
+
+            int col = char.Parse(key.Substring(0, 1).ToUpper()) - 64; 
+            int row = int.Parse(key.Substring(1, 1));
+            rowAndCol.Add(row);
+            rowAndCol.Add(col);
+
+            return rowAndCol;
+        }
+
+
+        public Cell GetCell(int row, int col)
+        {
+            Cell cell = new Cell();
+
+            
+            cell = (Cell)_cells[CellKeyFromRowAndCol(row,col)];
+
+
+            return cell;
+        }
+
+        public Cell GetTopCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+    
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row + 1, col)); 
+        }
+
+        public Cell GetBottomCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row - 1, col));
+        }
+
+        public Cell GetLeftBottomCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row - 1, col-1));
+        }
+
+        public Cell GetRightBottomCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row - 1, col + 1));
+        }
+
+        public Cell GetLeftTopCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row + 1, col - 1));
+        }
+
+        public Cell GetRightTopCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row + 1, col + 1));
+        }
+
+        public Cell GetLeftCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row, col-1));
+        }
+
+        public Cell GetRightCell(Cell sourceCell)
+        {
+            string key = GetKey(sourceCell);
+
+            List<int> rowAndCol = RowAndColFromCellKey(key);
+            int row = rowAndCol[0];
+            int col = rowAndCol[1];
+
+            return GetCell(CellKeyFromRowAndCol(row, col + 1));
+        }
 
         public void RemoveCell(Cell cell)
         {

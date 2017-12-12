@@ -11,17 +11,20 @@ namespace Proiect_TP.Models
         private Side.SideType _gameTurn;
         private Player _whitePlayer;
         private Player _blackPlayer;
+        private ChessGameRulesManager _rulesManager;
 
         public ChessGame()
         {
             _chessBoard = new ChessBoard();
+            _rulesManager = new ChessGameRulesManager(_chessBoard);
         }
         public ChessGame(User user1,User user2)
         {
+            _gameTurn = Side.SideType.White;
             _chessBoard = new ChessBoard();
             _whitePlayer = (Player)user1;
-     
-            _blackPlayer = (Player)user2; 
+            _blackPlayer = (Player)user2;
+            _rulesManager = new ChessGameRulesManager(_chessBoard);
         }
 
 

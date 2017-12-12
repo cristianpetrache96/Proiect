@@ -38,5 +38,19 @@ namespace Proiect_TP.Models
         {
             return _piece == null || _piece.Type == Piece.PieceType.Empty;
         }
+
+        public bool IsOwnedByOpponent(Cell dest)
+        {
+            if (IsEmpty())
+                return false;
+            else return _piece.Side.SideTip != dest.Piece.Side.SideTip;
+        }
+
+        public bool IsOwnedBySelf(Cell dest)
+        {
+            if (IsEmpty())
+                return false;
+            else return _piece.Side.SideTip == dest.Piece.Side.SideTip;
+        }
     }
 }

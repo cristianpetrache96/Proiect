@@ -29,9 +29,7 @@ namespace UnitTestProject1
         {
             ChessBoard board = new ChessBoard();
 
-            Cell cell = board.GetCell("a1");
-            Bitmap img = (Bitmap)Image.FromFile(cell.Piece.ImagePath);
-
+            board.GetCell(0, 0);
 
 
             

@@ -10,6 +10,7 @@ namespace Proiect_TP.Models
         Side _side;
         PieceType _type;
         public enum PieceType { Empty, King, Queen, Rook, Bishop, Knight, Pawn };
+        int _numberOfMoves;
         string _imgPath;
 
         public Piece()
@@ -112,9 +113,12 @@ namespace Proiect_TP.Models
             }
         }
 
-
-
+        public int NumberOfMoves
+        {
+            get
+            {
+                return _numberOfMoves;
+            }
+        }
     }
-
-    
 }

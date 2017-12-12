@@ -12,6 +12,7 @@ namespace Proiect_TP.Controllers
         // GET: ChessGame
         public ActionResult Index()
         {
+         
             return View(new ChessGame());
         }
     }
