@@ -119,6 +119,10 @@ namespace Proiect_TP.Models
             {
                 return _numberOfMoves;
             }
+            set
+            {
+                _numberOfMoves = value;
+            }
         }
     }
 }

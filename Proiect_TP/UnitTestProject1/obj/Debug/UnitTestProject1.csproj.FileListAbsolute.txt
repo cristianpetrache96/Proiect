@@ -58,11 +58,3 @@ X:\Proiect TP\Proiect_TP\UnitTestProject1\bin\Debug\System.Web.WebPages.Deployme
 X:\Proiect TP\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 X:\Proiect TP\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 X:\Proiect TP\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-<<<<<<< HEAD
-E:\git proiect 1 sah\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
-=======
-E:\Proiect TP2\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-E:\Proiect TP2\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-E:\Proiect TP2\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
-E:\Proiect TP2\Proiect_TP\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
->>>>>>> 1ed612aff7e6335c86a291f16b7b0b2eba64286f

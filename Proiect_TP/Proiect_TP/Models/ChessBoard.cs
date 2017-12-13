@@ -79,6 +79,7 @@ namespace Proiect_TP.Models
 
         }
 
+
         public string GetKey(Cell cell)
         {
             return _cells.Keys.OfType<String>().FirstOrDefault(s => _cells[s] == cell);
@@ -123,6 +124,23 @@ namespace Proiect_TP.Models
             return cell;
         }
 
+        public List<string> GetCellForASide(Side.SideType side)
+        {
+            List<string> cells = new List<string>();
+
+            for (int row = 1; row <= 8; row++)
+                for (int col = 1; col <= 8; col++)
+                {
+                    Cell cell = GetCell(row, col);
+                    if (cell != null && !cell.IsEmpty() && cell.Piece.Side.SideTip==side)
+                    {
+                        cells.Add(GetKey(cell));
+                    }
+                }
+
+            return cells;
+        }
+
         public Cell GetTopCell(Cell sourceCell)
         {
             string key = GetKey(sourceCell);
@@ -131,7 +149,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row + 1, col)); 
+            return GetCell(CellKeyFromRowAndCol(row - 1, col)); 
         }
 
         public Cell GetBottomCell(Cell sourceCell)
@@ -142,7 +160,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row - 1, col));
+            return GetCell(CellKeyFromRowAndCol(row +1, col));
         }
 
         public Cell GetLeftBottomCell(Cell sourceCell)
@@ -153,7 +171,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row - 1, col-1));
+            return GetCell(CellKeyFromRowAndCol(row + 1, col-1));
         }
 
         public Cell GetRightBottomCell(Cell sourceCell)
@@ -164,7 +182,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row - 1, col + 1));
+            return GetCell(CellKeyFromRowAndCol(row + 1, col + 1));
         }
 
         public Cell GetLeftTopCell(Cell sourceCell)
@@ -175,7 +193,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row + 1, col - 1));
+            return GetCell(CellKeyFromRowAndCol(row - 1, col - 1));
         }
 
         public Cell GetRightTopCell(Cell sourceCell)
@@ -186,7 +204,7 @@ namespace Proiect_TP.Models
             int row = rowAndCol[0];
             int col = rowAndCol[1];
 
-            return GetCell(CellKeyFromRowAndCol(row + 1, col + 1));
+            return GetCell(CellKeyFromRowAndCol(row - 1, col + 1));
         }
 
         public Cell GetLeftCell(Cell sourceCell)
@@ -216,6 +234,18 @@ namespace Proiect_TP.Models
             if (_cells.Contains(cell))
             {
                 _cells.Remove(cell);
+            }
+        }
+
+        public Hashtable Cells
+        {
+            get
+            {
+                return _cells;
+            }
+            set
+            {
+                _cells = value;
             }
         }
 
