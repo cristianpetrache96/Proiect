@@ -20,7 +20,8 @@ namespace Proiect_TP.Models
 
             Cell possibleDestination;
 
-         
+            if(source.Piece.Side.SideTip ==Side.SideType.White)
+            {
                 possibleDestination = _board.GetTopCell(source);
                 if (possibleDestination != null && possibleDestination.IsEmpty())
                     possibleMoves.Add(_board.GetKey(possibleDestination));
@@ -33,13 +34,37 @@ namespace Proiect_TP.Models
                         possibleMoves.Add(_board.GetKey(possibleDestination));
                 }
 
-            possibleDestination = _board.GetLeftTopCell(source);
-            if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
-                possibleMoves.Add(_board.GetKey(possibleDestination));
+                possibleDestination = _board.GetLeftTopCell(source);
+                if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
+                    possibleMoves.Add(_board.GetKey(possibleDestination));
 
-            possibleDestination = _board.GetRightTopCell(source);
-            if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
-                possibleMoves.Add(_board.GetKey(possibleDestination));
+                possibleDestination = _board.GetRightTopCell(source);
+                if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
+                    possibleMoves.Add(_board.GetKey(possibleDestination));
+            }
+            else
+            {
+                possibleDestination = _board.GetBottomCell(source);
+                if (possibleDestination != null && possibleDestination.IsEmpty())
+                    possibleMoves.Add(_board.GetKey(possibleDestination));
+
+                if (possibleDestination != null && possibleDestination.IsEmpty())
+                {
+                    possibleDestination = _board.GetBottomCell(possibleDestination);
+
+                    if (possibleDestination != null && source.Piece.NumberOfMoves == 0 && possibleDestination.IsEmpty())
+                        possibleMoves.Add(_board.GetKey(possibleDestination));
+                }
+
+                possibleDestination = _board.GetLeftBottomCell(source);
+                if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
+                    possibleMoves.Add(_board.GetKey(possibleDestination));
+
+                possibleDestination = _board.GetRightBottomCell(source);
+                if (possibleDestination != null && possibleDestination.IsOwnedByOpponent(source))
+                    possibleMoves.Add(_board.GetKey(possibleDestination));
+            }
+                
 
             return possibleMoves;
         }
