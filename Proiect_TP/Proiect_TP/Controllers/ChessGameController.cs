@@ -10,10 +10,18 @@ namespace Proiect_TP.Controllers
     public class ChessGameController : Controller
     {
         // GET: ChessGame
-        public ActionResult Index()
+           public ActionResult Index()
+           {
+              ChessGame ch = new ChessGame();
+
+              return View(ch);
+          }
+        [HttpPost]
+        public ActionResult Index(string linia,string coloana) 
         {
-         
-            return View(new ChessGame());
+            ChessGame ch = new ChessGame();
+
+            return RedirectToAction("Index");
         }
     }
 }
