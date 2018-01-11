@@ -39,5 +39,17 @@ namespace Proiect_TP.DAL
                 return null;
             }
         }
+
+        internal User GetUserByEmailPass(User user)
+        {
+            _context = new Context();
+            return _context.User.FirstOrDefault(item => item.Name == user.Name && item.Password == user.Password);
+        }
+
+        internal bool CheckPassword(String name, String pass)
+        {
+            _context = new Context();
+            return _context.User.Any(item => item.Name == name && item.Password == pass);
+        }
     }
 }

@@ -94,7 +94,7 @@ namespace Proiect_TP.Models
         {
             string key;
 
-            key = Convert.ToString(Convert.ToChar(col + 64));
+            key = Convert.ToString(Convert.ToChar(col + 96));
             key += row.ToString();
 
             return key;
@@ -117,7 +117,8 @@ namespace Proiect_TP.Models
         {
             Cell cell = new Cell();
 
-            
+
+
             cell = (Cell)_cells[CellKeyFromRowAndCol(row,col)];
 
 

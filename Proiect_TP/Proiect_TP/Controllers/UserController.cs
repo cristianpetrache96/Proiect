@@ -44,7 +44,10 @@ namespace Proiect_TP.Controllers
             return View();
         }
 
-
+        public ActionResult Submit(string user)
+        {
+            return RedirectToAction("Index","ChessGameLobby");
+        }
     }
     
 }

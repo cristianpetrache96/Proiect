@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proiect_TP.BLL;
+using Proiect_TP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,25 @@ namespace Proiect_TP.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(User user)
         {
-            return View();
+            if( user.Name!= null && user.Password!=null)
+            {
+                UserBLL userBll = new UserBLL();
+                if (userBll.CheckPassword(user.Name,user.Password))
+                {
+                    user = userBll.GetUserByEmailPass(user);
+                    Session["ID"] = user.Id;
+                    return RedirectToAction("Index", "ChessGameLobby",user);
+                }
+                
+            }
+            return View(user);
+        }
+        public ActionResult Logout()
+        {
+            Session["ID"] = null;
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult About()

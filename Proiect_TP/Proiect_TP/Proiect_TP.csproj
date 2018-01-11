@@ -176,8 +176,10 @@
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\Side.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Proiect_TP.BLL\ChessGameLobbyBLL.cs" />
     <Compile Include="Proiect_TP.BLL\ScoreBLL.cs" />
     <Compile Include="Proiect_TP.BLL\UserBLL.cs" />
+    <Compile Include="Proiect_TP.DAL\ChessGameLobbyDAL.cs" />
     <Compile Include="Proiect_TP.DAL\ScoreDAL.cs" />
     <Compile Include="Proiect_TP.DAL\UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
