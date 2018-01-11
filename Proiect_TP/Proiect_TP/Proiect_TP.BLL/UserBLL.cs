@@ -22,5 +22,14 @@ namespace Proiect_TP.BLL
             return userDAL.GetUsers();
         }
 
+        internal User GetUserByEmailPass(User user)
+        {
+            return userDAL.GetUserByEmailPass(user);
+        }
+
+        internal bool CheckPassword(String name, String pass)
+        {
+            return userDAL.CheckPassword(name, pass);
+        }
     }
 }

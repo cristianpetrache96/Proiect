@@ -28,5 +28,12 @@ namespace Proiect_TP.Models
                 return _side;
             }
         }
+
+        public SideType Enemy()
+        {
+            if (this.SideTip == SideType.White)
+                return SideType.Black;
+            else return SideType.White; 
+        }
     }
 }

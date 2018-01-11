@@ -16,5 +16,6 @@ namespace Proiect_TP.DBContext
 
         public DbSet<User> User { get; set; }
         public DbSet<Score> Score { get; set; }
+        public DbSet<ChessGameLobby> ChessGameLobby { get; set; }
     }
 }

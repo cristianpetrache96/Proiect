@@ -29,7 +29,7 @@ namespace UnitTestProject1
         {
             ChessBoard board = new ChessBoard();
 
-            board.GetCell(0, 0);
+            board.GetCell(1, 1);
 
 
             

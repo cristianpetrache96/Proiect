@@ -1,79 +1,3 @@
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\ApplicationInsights.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csc.rsp
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csi.exe
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\csi.rsp
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CodeAnalysis.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.CSharp.Core.targets
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\Microsoft.VisualBasic.Core.targets
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.AppContext.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.Collections.Immutable.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.Diagnostics.StackTrace.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.IO.FileSystem.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.IO.FileSystem.Primitives.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\System.Reflection.Metadata.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\vbc.exe
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\vbc.exe.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\vbc.rsp
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\VBCSCompiler.exe
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\roslyn\VBCSCompiler.exe.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Proiect_TP.dll.config
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Proiect_TP.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Proiect_TP.pdb
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Antlr3.Runtime.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\EntityFramework.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\EntityFramework.SqlServer.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.Agent.Intercept.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.DependencyCollector.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.PerfCounterCollector.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.ServerTelemetryChannel.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.Web.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.WindowsServer.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.ApplicationInsights.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.Web.Infrastructure.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Newtonsoft.Json.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Helpers.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Mvc.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Optimization.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Razor.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.Deployment.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.Razor.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\WebGrease.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\EntityFramework.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\EntityFramework.SqlServer.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\log4net.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Helpers.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Mvc.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Optimization.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.Razor.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.Deployment.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\System.Web.WebPages.Razor.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Antlr3.Runtime.pdb
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Newtonsoft.Json.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.ApplicationInsights.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.DependencyCollector.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.ServerTelemetryChannel.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.WindowsServer.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\bin\Microsoft.AI.Web.xml
-X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
-X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreate.resources
-X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
-X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
-X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\ApplicationInsights.config
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\roslyn\csc.exe.config
@@ -145,8 +69,8 @@ E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.DependencyCollector.
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.WindowsServer.xml
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\bin\Microsoft.AI.Web.xml
-E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreate.resources
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
+E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csprojResolveAssemblyReference.cache
