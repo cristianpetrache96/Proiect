@@ -40,7 +40,7 @@ namespace Proiect_TP.DAL
         }
         public int Highscore()
         {
-            List<Score> ScoreList=_context.Score.ToList<Score>();
+            List<Score> ScoreList = _context.Score.ToList<Score>();
 
             return new int();
         }

@@ -9,7 +9,7 @@ namespace Proiect_TP.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Proiect_TP.DBContext.Context context)

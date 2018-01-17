@@ -20,7 +20,7 @@ namespace Proiect_TP.Controllers
         {
             ChessGameLobbyBLL cgb = new ChessGameLobbyBLL();
             bool ok;
-            ok=cgb.addUser(user);
+            ok = cgb.addUser(user);
             if (ok)
             {
                 Session["InLobby"] = true;
@@ -32,7 +32,7 @@ namespace Proiect_TP.Controllers
             }
             else
             {
-                return RedirectToAction("Index","ChessGame");
+                return RedirectToAction("Index", "ChessGame");
             }
         }
     }

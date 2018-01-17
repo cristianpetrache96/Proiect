@@ -9,7 +9,7 @@ namespace Proiect_TP.BLL
 {
     public class ScoreBLL
     {
-        
+
         ScoreDAL ScoreDAL = new ScoreDAL();
         internal bool AddScore(Score score)
         {

@@ -76,17 +76,17 @@ namespace Proiect_TP.DAL
         internal bool createRoom1()
         {
             try
-            { 
-            ChessGameLobby gcl = new ChessGameLobby();
-            _context = new Context();
-            _context.ChessGameLobby.Add(gcl);
-            _context.SaveChanges();
+            {
+                ChessGameLobby gcl = new ChessGameLobby();
+                _context = new Context();
+                _context.ChessGameLobby.Add(gcl);
+                _context.SaveChanges();
                 return true;
             }
             catch (Exception e)
             {
                 return false;
             }
-}
+        }
     }
 }

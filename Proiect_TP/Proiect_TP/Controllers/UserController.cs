@@ -12,7 +12,7 @@ namespace Proiect_TP.Controllers
     {
         UserBLL userService = new UserBLL();
         ScoreBLL scoreService = new ScoreBLL();
-        // GET: User
+       // GET: User
         public ActionResult Index()
         {
            
