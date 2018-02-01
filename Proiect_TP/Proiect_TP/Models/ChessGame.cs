@@ -73,5 +73,13 @@ namespace Proiect_TP.Models
                 return _chessBoard;
             }
         }
+
+        public ChessGameRulesManager RulesManager
+        {
+            get
+            {
+                return _rulesManager;
+            }
+        }
     }
 }
