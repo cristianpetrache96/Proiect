@@ -29,7 +29,7 @@ namespace Proiect_TP.Models
 
             string key;
 
-            for(char c ='a'; c<='g';c++)
+            for(char c ='a'; c<='h';c++)
             {
                 for(int j=1;j<=8;j++)
                 {
@@ -256,5 +256,155 @@ namespace Proiect_TP.Models
 
  
         }
+
+        public ChessTable GetTable()
+        {
+            ChessTable table = new ChessTable();
+
+            table.A1 = CellString("a1");
+            table.A2 = CellString("a2");
+            table.A3 = CellString("a3");
+            table.A4 = CellString("a4");
+            table.A5 = CellString("a5");
+            table.A6 = CellString("a6");
+            table.A7 = CellString("a7");
+            table.A8 = CellString("a8");
+
+            table.B1 = CellString("b1");
+            table.B2 = CellString("b2");
+            table.B3 = CellString("b3");
+            table.B4 = CellString("b4");
+            table.B5 = CellString("b5");
+            table.B6 = CellString("b6");
+            table.B7 = CellString("b7");
+            table.B8 = CellString("b8");
+
+            table.C1 = CellString("c1");
+            table.C2 = CellString("c2");
+            table.C3 = CellString("c3");
+            table.C4 = CellString("c4");
+            table.C5 = CellString("c5");
+            table.C6 = CellString("c6");
+            table.C7 = CellString("c7");
+            table.C8 = CellString("c8");
+
+            table.D1 = CellString("d1");
+            table.D2 = CellString("d2");
+            table.D3 = CellString("d3");
+            table.D4 = CellString("d4");
+            table.D5 = CellString("d5");
+            table.D6 = CellString("d6");
+            table.D7 = CellString("d7");
+            table.D8 = CellString("d8");
+
+            table.E1 = CellString("e1");
+            table.E2 = CellString("e2");
+            table.E3 = CellString("e3");
+            table.E4 = CellString("e4");
+            table.E5 = CellString("e5");
+            table.E6 = CellString("e6");
+            table.E7 = CellString("e7");
+            table.E8 = CellString("e8");
+
+            table.F1 = CellString("f1");
+            table.F2 = CellString("f2");
+            table.F3 = CellString("f3");
+            table.F4 = CellString("f4");
+            table.F5 = CellString("f5");
+            table.F6 = CellString("f6");
+            table.F7 = CellString("f7");
+            table.F8 = CellString("f8");
+
+            table.G1 = CellString("g1");
+            table.G2 = CellString("g2");
+            table.G3 = CellString("g3");
+            table.G4 = CellString("g4");
+            table.G5 = CellString("g5");
+            table.G6 = CellString("g6");
+            table.G7 = CellString("g7");
+            table.G8 = CellString("g8");
+
+            table.H1 = CellString("h1");
+            table.H2 = CellString("h2");
+            table.H3 = CellString("h3");
+            table.H4 = CellString("h4");
+            table.H5 = CellString("h5");
+            table.H6 = CellString("h6");
+            table.H7 = CellString("h7");
+            table.H8 = CellString("h8");
+
+            return table;
+        }
+
+        public string CellString(string key)
+        {
+            Cell cell = (Cell)_cells[key];
+            if (cell.Piece.Side !=null && cell.Piece.Side.SideTip == Side.SideType.Black)
+            {
+                if (cell.Piece.Type == Piece.PieceType.Rook)
+                {
+                    return "blackRook";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.King)
+                {
+                    return "blackKing";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Queen)
+                {
+                    return "blackQueen";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Knight)
+                {
+                    return "blackKnight";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Empty)
+                {
+                    return "";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Pawn)
+                {
+                    return "blackPawn";
+                }
+                else return "";
+
+            }
+
+            else if (cell.Piece.Side != null && cell.Piece.Side.SideTip == Side.SideType.White)
+            {
+                if (cell.Piece.Type == Piece.PieceType.Rook)
+                {
+                    return "whiteRook";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.King)
+                {
+                    return "whiteKing";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Queen)
+                {
+                    return "whiteQueen";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Knight)
+                {
+                    return "whiteKnight";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Empty)
+                {
+                    return "";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Pawn)
+                {
+                    return "whitePawn";
+                }
+                else return "";
+
+            }
+            return "";
+
+
+
+
+        }
     }
+
+     
 }

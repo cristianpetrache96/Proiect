@@ -83,9 +83,7 @@ namespace Proiect_TP.Models
         public String H6{ get; set; }
         public String H7{ get; set; }
         public String H8{ get; set; }
-
-
-
-
     }
+
+    
 }

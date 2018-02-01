@@ -23,8 +23,11 @@ namespace Proiect_TP.Controllers
 
         public ActionResult Create()
         {
-            ChessLobbyDAL cl = new ChessLobbyDAL();
-            cl.addLobby();
+         
+            ChessTableDAL tl = new ChessTableDAL();
+            tl.UpdateTable(new ChessBoard());
+          
+            ChessBoard board = tl.GetChessBoard(tl.GetTables()[0]);
         
             return View();
         }
