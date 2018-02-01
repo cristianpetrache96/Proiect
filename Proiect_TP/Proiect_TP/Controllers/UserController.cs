@@ -23,8 +23,7 @@ namespace Proiect_TP.Controllers
 
         public ActionResult Create()
         {
-            ChessLobbyDAL cl = new ChessLobbyDAL();
-            cl.addLobby();
+           
         
             return View();
         }

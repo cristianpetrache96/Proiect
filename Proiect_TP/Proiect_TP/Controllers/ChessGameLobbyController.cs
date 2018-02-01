@@ -1,5 +1,6 @@
 ﻿using Proiect_TP.BLL;
 using Proiect_TP.Models;
+using Proiect_TP.Proiect_TP.BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,24 +17,28 @@ namespace Proiect_TP.Controllers
             return View(user);
         }
 
-        public ActionResult InLobby(User user)
+        public ActionResult InLobby()
         {
-          //  ChessGameLobbyBLL cgb = new ChessGameLobbyBLL();
-            bool ok;
-        //    ok = cgb.addUser(user);
-        //    if (ok)
+            ChessLobbyBLL chessLobbyBLL = new ChessLobbyBLL();
+            User user = new User();
+            user.Id = (Guid)Session["ID"];
+           // chessLobbyBLL.finishLobby();
+            if (chessLobbyBLL.addUser(user))
             {
-         //       Session["InLobby"] = true;
+                Session["InLobby"] = true;
             }
-        //    if (cgb.isEmpty())
+            //TODO in caz de intra al treilea
+            if (chessLobbyBLL.isEmpty())
             {
-
-        //        return RedirectToAction("Index");
+               
+                return RedirectToAction("Index");
             }
-      //      else
+            if ((bool)Session["InLobby"] == true)
             {
+                // is sesion "in loby" is tru atunci , daca nu ramane pe pagina
                 return RedirectToAction("Index", "ChessGame");
             }
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,44 +1,44 @@
-﻿
+﻿@model Proiect_TP.Models.User
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*<script>
-    function msg() {
-        alert("You are in lobby!!");
-    }
-    $("#text").click(function () {
-        
-        alert("Handler for .click() called.");
-    });
-</script>*@
+        function msg() {
+            alert("You are in lobby!!");
+        }
+        $("#text").click(function () {
+
+            alert("Handler for .click() called.");
+        });
+    </script>*@
 <h2>Game Rooms</h2>
 
 <style>
     a[rel=fancybox] {
         display: inline-block;
         background: url('../../Images/lobby_logo.png') no-repeat 0 0 transparent;
-        height:100px;
-        width:100px;
+        height: 100px;
+        width: 100px;
         background-position: left;
-        color:white;
+        color: white;
     }
-    
+
     #text {
         text-align: center;
         color: darkgreen;
         font-size: 16px;
         font-weight: bold;
-        line-height:100px;
+        line-height: 100px;
     }
-    
 </style>
 
 @if (Session["InLobby"] == null)
 {
-<a href="#" id ="text" rel="fancybox" onclick ="location.href='@Url.Action("InLobby", "ChessGameLobby")'">Room #1</a>
+    <a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("InLobby", "ChessGameLobby")'">Room #1</a>
+
 }
-<a href="#" id="text" rel="fancybox">Room #2</a>
+    <a href="#" id="text" rel="fancybox">Room #2</a>
 <a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #3</a>
 <a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #4</a>
 <a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #5</a>
