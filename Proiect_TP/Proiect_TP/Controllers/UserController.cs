@@ -11,7 +11,7 @@ namespace Proiect_TP.Controllers
     public class UserController : Controller
     {
         UserBLL userService = new UserBLL();
-        ScoreBLL scoreService = new ScoreBLL();
+        //ScoreBLL scoreService = new ScoreBLL();
        // GET: User
         public ActionResult Index()
         {
@@ -30,19 +30,19 @@ namespace Proiect_TP.Controllers
         {
             if (TryUpdateModel<User>(user))
             {
-                Score score = new Score(); 
+                //Score score = new Score(); 
                 user.Id = Guid.NewGuid();
                 userService.AddUser(user);
-                score.Scoreid = Guid.NewGuid();
-                score.Iduser = user.Id;
-                scoreService.AddScore(score);
+                //score.Scoreid = Guid.NewGuid();
+               // score.Iduser = user.Id;
+               // scoreService.AddScore(score);
             }
             return RedirectToAction("Index");
         }
-        public ActionResult HighScore(Score score)
-        {
-            return View();
-        }
+        //public ActionResult HighScore(Score score)
+        //{
+        //    return View();
+        //}
 
         public ActionResult Submit(string user)
         {

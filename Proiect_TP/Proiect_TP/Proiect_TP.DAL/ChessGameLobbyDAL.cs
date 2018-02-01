@@ -32,7 +32,7 @@ namespace Proiect_TP.DAL
         {
             _context = new Context();
             ChessGameLobby gcl = new ChessGameLobby();
-            gcl = _context.ChessGameLobby.ElementAt(0);
+            gcl = _context.ChessGameLobby.ToList().ElementAt(0);
             if (isEmpty())
             {
                 if (gcl.user1 == null)

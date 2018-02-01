@@ -170,6 +170,7 @@
     <Compile Include="Models\ChessGame.cs" />
     <Compile Include="Models\ChessGameLobby.cs" />
     <Compile Include="Models\ChessGameRulesManager.cs" />
+    <Compile Include="Models\ChessTable.cs" />
     <Compile Include="Models\Piece.cs" />
     <Compile Include="Models\PieceMove.cs" />
     <Compile Include="Models\Player.cs" />
@@ -180,6 +181,7 @@
     <Compile Include="Proiect_TP.BLL\ScoreBLL.cs" />
     <Compile Include="Proiect_TP.BLL\UserBLL.cs" />
     <Compile Include="Proiect_TP.DAL\ChessGameLobbyDAL.cs" />
+    <Compile Include="Proiect_TP.DAL\ChessTableDAL.cs" />
     <Compile Include="Proiect_TP.DAL\ScoreDAL.cs" />
     <Compile Include="Proiect_TP.DAL\UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

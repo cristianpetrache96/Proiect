@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace Proiect_TP.Models
 {
+    [NotMapped]
     public class ChessGame
     {
         private ChessBoard _chessBoard;
