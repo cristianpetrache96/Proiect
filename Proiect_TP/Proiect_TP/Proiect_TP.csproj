@@ -182,6 +182,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Proiect_TP.BLL\ChessGameLobbyBLL.cs" />
     <Compile Include="Proiect_TP.BLL\ChessLobbyBLL.cs" />
+    <Compile Include="Proiect_TP.BLL\ChessTableBLL.cs" />
     <Compile Include="Proiect_TP.BLL\ScoreBLL.cs" />
     <Compile Include="Proiect_TP.BLL\UserBLL.cs" />
     <Compile Include="Proiect_TP.DAL\ChessGameLobbyDAL.cs" />

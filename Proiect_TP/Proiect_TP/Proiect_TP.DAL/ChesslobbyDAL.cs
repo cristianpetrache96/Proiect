@@ -1,5 +1,6 @@
 ﻿using Proiect_TP.DBContext;
 using Proiect_TP.Models;
+using Proiect_TP.Proiect_TP.BLL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -68,9 +69,11 @@ namespace Proiect_TP.Proiect_TP.DAL
                     else
                     {
                         ChessLobby newLobby = new ChessLobby();
+                        ChessTableBLL chs = new ChessTableBLL();
                         newLobby.Id = cl.Id;
                         newLobby.user1GUID = cl.user1GUID;
                         newLobby.user2GUID = user.Id;
+                        newLobby.gameGUID = chs.TableID();
                         _context.ChessLobby.Remove(cl);
                         _context.SaveChanges();
                         _context.ChessLobby.Add(newLobby);

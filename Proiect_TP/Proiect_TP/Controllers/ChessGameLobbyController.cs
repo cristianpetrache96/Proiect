@@ -22,7 +22,7 @@ namespace Proiect_TP.Controllers
             ChessLobbyBLL chessLobbyBLL = new ChessLobbyBLL();
             User user = new User();
             user.Id = (Guid)Session["ID"];
-           // chessLobbyBLL.finishLobby();
+            //chessLobbyBLL.finishLobby();
             if (chessLobbyBLL.addUser(user))
             {
                 Session["InLobby"] = true;
