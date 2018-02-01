@@ -18,19 +18,19 @@ namespace Proiect_TP.Controllers
 
         public ActionResult InLobby(User user)
         {
-            ChessGameLobbyBLL cgb = new ChessGameLobbyBLL();
+          //  ChessGameLobbyBLL cgb = new ChessGameLobbyBLL();
             bool ok;
-            ok = cgb.addUser(user);
-            if (ok)
+        //    ok = cgb.addUser(user);
+        //    if (ok)
             {
-                Session["InLobby"] = true;
+         //       Session["InLobby"] = true;
             }
-            if (cgb.isEmpty())
+        //    if (cgb.isEmpty())
             {
 
-                return RedirectToAction("Index");
+        //        return RedirectToAction("Index");
             }
-            else
+      //      else
             {
                 return RedirectToAction("Index", "ChessGame");
             }

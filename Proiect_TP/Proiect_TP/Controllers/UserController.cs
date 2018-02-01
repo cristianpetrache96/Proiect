@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Proiect_TP.Models;
 using Proiect_TP.BLL;
+using Proiect_TP.Proiect_TP.DAL;
 
 namespace Proiect_TP.Controllers
 {
@@ -22,6 +23,9 @@ namespace Proiect_TP.Controllers
 
         public ActionResult Create()
         {
+            ChessLobbyDAL cl = new ChessLobbyDAL();
+            cl.addLobby();
+        
             return View();
         }
 

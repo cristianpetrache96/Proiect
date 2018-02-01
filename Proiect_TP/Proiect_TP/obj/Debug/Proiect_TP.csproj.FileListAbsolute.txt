@@ -150,3 +150,4 @@ X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.Migrations.InitialCreat
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.GenerateResource.Cache
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.dll
 X:\Proiect TP\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.pdb
+E:\git proiect 1 sah\Proiect_TP\Proiect_TP\obj\Debug\Proiect_TP.csproj.CoreCompileInputs.cache
