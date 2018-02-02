@@ -22,6 +22,11 @@ namespace UnitTestProject1
                 Name = "Cristian"
             };
 
+            User user3 = new User()
+            {
+                Name = "Cristian"
+            };
+
             ChessGame chessgame = new ChessGame(user1, user2);
         }
         [TestMethod]
@@ -31,7 +36,7 @@ namespace UnitTestProject1
 
             board.GetCell(1, 1);
 
-
+            Console.WriteLine("aa");
             
         }
     }

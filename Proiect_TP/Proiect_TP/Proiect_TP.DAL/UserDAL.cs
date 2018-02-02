@@ -9,6 +9,7 @@ namespace Proiect_TP.DAL
 {
     public class UserDAL
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static Context _context = new Context();
 
         internal bool AddUser(User user)
@@ -22,6 +23,7 @@ namespace Proiect_TP.DAL
             }
             catch (Exception ex)
             {
+                log.Info(ex.StackTrace);
                 return false;
             }
         }
@@ -36,6 +38,7 @@ namespace Proiect_TP.DAL
             }
             catch (Exception ex)
             {
+                log.Info(ex.StackTrace);
                 return null;
             }
         }
@@ -50,6 +53,11 @@ namespace Proiect_TP.DAL
         {
             _context = new Context();
             return _context.User.Any(item => item.Name == name && item.Password == pass);
+        }
+        internal User GetUserById(Guid Id)
+        {
+            _context = new Context();
+            return _context.User.FirstOrDefault(item => item.Id == Id);
         }
     }
 }

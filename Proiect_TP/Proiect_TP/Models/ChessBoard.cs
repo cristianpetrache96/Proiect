@@ -135,8 +135,7 @@ namespace Proiect_TP.Models
 
         public string GetKey(Cell cell)
         {
-            if (cell.Equals(_cells["a2"]))
-                Console.WriteLine("asfas");
+            
             return _cells.Keys.OfType<String>().FirstOrDefault(s => _cells[s].Equals(cell));
         }
 
@@ -436,6 +435,10 @@ namespace Proiect_TP.Models
                 {
                     return "blackPawn";
                 }
+                else if (cell.Piece.Type == Piece.PieceType.Bishop)
+                {
+                    return "blackBishop";
+                }
                 else return "";
 
             }
@@ -465,6 +468,10 @@ namespace Proiect_TP.Models
                 else if (cell.Piece.Type == Piece.PieceType.Pawn)
                 {
                     return "whitePawn";
+                }
+                else if (cell.Piece.Type == Piece.PieceType.Bishop)
+                {
+                    return "whiteBishop";
                 }
                 else return "";
 

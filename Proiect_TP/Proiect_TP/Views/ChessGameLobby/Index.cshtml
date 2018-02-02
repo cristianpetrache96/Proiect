@@ -3,15 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@*<script>
-        function msg() {
-            alert("You are in lobby!!");
-        }
-        $("#text").click(function () {
 
-            alert("Handler for .click() called.");
-        });
-    </script>*@
 <h2>Game Rooms</h2>
 
 <style>
@@ -36,9 +28,9 @@
 @if (Session["InLobby"] == null)
 {
     <a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("InLobby", "ChessGameLobby")'">Room #1</a>
-
-}
     <a href="#" id="text" rel="fancybox">Room #2</a>
-<a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #3</a>
-<a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #4</a>
-<a href="#" id="text" rel="fancybox" onclick="location.href='@Url.Action("Index", "ChessGame")'">Room #5</a>
+    <a href="#" id="text" rel="fancybox">Room #3</a>
+    <a href="#" id="text" rel="fancybox">Room #4</a>
+    <a href="#" id="text" rel="fancybox">Room #5</a>
+}
+

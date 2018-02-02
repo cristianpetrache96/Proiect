@@ -428,7 +428,7 @@ namespace Proiect_TP.Models
             {
                 List<string> possibleMoves = GetPossibleMoves(_board.GetCell(cell));
 
-                if (possibleMoves.Contains(cell))
+                if (possibleMoves.Contains(kingOwnerCell))
                     return true;
             }
             return false;
@@ -480,5 +480,12 @@ namespace Proiect_TP.Models
             return ok;
         }
 
+        
+
+        public bool CheckChess(List<string> posibleMove)
+        {
+
+            return false;
+        }
     }
 }

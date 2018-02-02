@@ -14,8 +14,17 @@ namespace Proiect_TP.Controllers
         // GET: ChessGameLobby
         public ActionResult Index(User user)
         {
+            
+                ChessLobbyBLL cl = new ChessLobbyBLL();
+                if (cl.GetLobbyTable() != new Guid())
+                {
+                    if ((Guid)Session["ID"] == cl.lobbyUser1().Id || (Guid)Session["ID"] == cl.lobbyUser2().Id )
+                    return RedirectToAction("Index", "ChessGame");
+                }
+            
             return View(user);
         }
+
 
         public ActionResult InLobby()
         {
@@ -27,18 +36,18 @@ namespace Proiect_TP.Controllers
             {
                 Session["InLobby"] = true;
             }
-            //TODO in caz de intra al treilea
             if (chessLobbyBLL.isEmpty())
             {
                
                 return RedirectToAction("Index");
             }
+            if (Session["InLobby"]!=null)
             if ((bool)Session["InLobby"] == true)
             {
-                // is sesion "in loby" is tru atunci , daca nu ramane pe pagina
                 return RedirectToAction("Index", "ChessGame");
             }
             return RedirectToAction("Index");
         }
+
     }
 }

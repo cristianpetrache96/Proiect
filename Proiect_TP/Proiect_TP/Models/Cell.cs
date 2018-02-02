@@ -29,6 +29,7 @@ namespace Proiect_TP.Models
             _piece = piece;
         }
 
+
         public Piece Piece
         {
             get

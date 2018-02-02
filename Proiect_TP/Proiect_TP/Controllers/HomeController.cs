@@ -14,6 +14,7 @@ namespace Proiect_TP.Controllers
 
         public static Cell sourceCell;
         public static Cell destCell;
+        static List<string> possibleMoves;
 
         public ActionResult Index(User user)
         {
@@ -37,43 +38,69 @@ namespace Proiect_TP.Controllers
         }
         public ActionResult Index2(string id)
         {
-            ChessTableBLL ct = new ChessTableBLL();
-            ChessBoard cb = ct.GetChessBoard(ct.GetTables()[0]);
-            ChessGameRulesManager rulesManager = new ChessGameRulesManager(cb);
             
-            List<int> rowAndCol = SplitRowAndCol(id);
-            List<string> possibleMoves = new List<string>();
-            if (sourceCell == null)
+            ChessLobbyBLL chessLobby = new ChessLobbyBLL();
+            Side.SideType turn =  chessLobby.GetTurn();
+            User userLobby1 = chessLobby.lobbyUser1();
+            User userLobby2 = chessLobby.lobbyUser2();
+            if ((turn == Side.SideType.White && userLobby1.Id == (Guid)Session["ID"]) || 
+                (turn == Side.SideType.Black && userLobby2.Id == (Guid)Session["ID"]))
             {
-                sourceCell = cb.GetCell(rowAndCol[0], rowAndCol[1]);
-                if(sourceCell.IsEmpty())
+
+                ChessTableBLL ct = new ChessTableBLL();
+                ChessBoard cb = ct.GetChessBoard(ct.GetTables()[0]);
+                ChessGameRulesManager rulesManager = new ChessGameRulesManager(cb);
+
+                List<int> rowAndCol = SplitRowAndCol(id);
+                 
+                if (sourceCell == null)
                 {
+                    possibleMoves = new List<string>();
+                    sourceCell = cb.GetCell(rowAndCol[0], rowAndCol[1]);
+                    if (sourceCell.IsEmpty())
+                    {
+                        sourceCell = null;
+                        destCell = null;
+                    }
+                    else if (sourceCell.Piece.Side.SideTip != turn)
+                    {
+                        sourceCell = null;
+                    }
+                    if (sourceCell != null)
+                    {
+                        // if (rulesManager.IsUnderCheck(turn))
+                        // {
+                        //    possibleMoves = rulesManager.GetOnlyLegalMoves(sourceCell);
+                        // }
+                        // else
+                        // {
+                        possibleMoves = rulesManager.GetPossibleMoves(sourceCell);
+                    }
+
+
+                }
+                else
+                {
+                    destCell = cb.GetCell(rowAndCol[0], rowAndCol[1]);
+                    bool ok = rulesManager.IsValidMove(cb.GetKey(destCell), possibleMoves);
+
+                    if (ok)
+                    {
+                        cb = rulesManager.ExecuteMove(new PieceMove(sourceCell, destCell));
+                        ct.UpdateTable(cb);
+                    }
                     sourceCell = null;
                     destCell = null;
+                    chessLobby.ReversTurn();
                 }
                 
-                
             }
-            else
-            {
-                possibleMoves = rulesManager.GetPossibleMoves(sourceCell);
-                destCell = cb.GetCell(rowAndCol[0], rowAndCol[1]);
-                bool ok = rulesManager.IsValidMove(cb.GetKey(destCell),possibleMoves);
-
-                if (ok)
-                {
-                   cb = rulesManager.ExecuteMove(new PieceMove(sourceCell, destCell));
-                   ct.UpdateTable(cb);
-                    
-                }
-                sourceCell = null;
-                destCell = null;
-            }
-
             
 
             return RedirectToAction("Index", "ChessGame");
         }
+
+  
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

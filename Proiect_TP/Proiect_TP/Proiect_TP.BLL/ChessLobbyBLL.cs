@@ -11,6 +11,18 @@ namespace Proiect_TP.Proiect_TP.BLL
     {
         ChessLobbyDAL cl = new ChessLobbyDAL();
 
+        internal Guid GetLobbyTable()
+        {
+            return cl.GetLobbyTable();
+        }
+        internal Side.SideType GetTurn()
+        {
+            return cl.GetTurn();
+        }
+        internal void ReversTurn()
+        {
+            cl.ReversTurn();
+        }
         internal bool addUser(User user)
         {
             return cl.addUser(user);
@@ -23,6 +35,14 @@ namespace Proiect_TP.Proiect_TP.BLL
         internal bool isEmpty()
         {
             return cl.isEmpty();
+        }
+        internal User lobbyUser1()
+        {
+            return cl.lobbyUser1();
+        }
+        internal User lobbyUser2()
+        {
+            return cl.lobbyUser2();
         }
     }
 }

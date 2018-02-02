@@ -40,7 +40,7 @@ namespace Proiect_TP.Controllers
                // score.Iduser = user.Id;
                // scoreService.AddScore(score);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
         //public ActionResult HighScore(Score score)
         //{

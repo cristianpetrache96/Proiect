@@ -16,7 +16,7 @@
 </style>
 
 <div class="center">
-<h2>Create</h2>
+<h2 style="color:chartreuse">Create</h2>
 
 
 @using (Html.BeginForm()) 
@@ -24,10 +24,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>User</h4>
+        <h4 style="color:chartreuse">User</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div class="form-group" style="color:chartreuse">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:chartreuse">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:chartreuse">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })

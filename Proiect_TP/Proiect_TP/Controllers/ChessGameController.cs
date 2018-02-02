@@ -16,12 +16,16 @@ namespace Proiect_TP.Controllers
 
         {
             ChessTableBLL ct = new ChessTableBLL();
-
+            ChessLobbyBLL cl = new ChessLobbyBLL();
+           // User user1 = cl.lobbyUser1();
+           // User user2 = cl.lobbyUser2();
             ChessGame ch = new ChessGame();
-
+            //ct.UpdateTable(ch.Board);
             ch.Board = ct.GetChessBoard(ct.GetTables().ToList()[0]);
+            ch._gameTurn =  cl.GetTurn();
             return View(ch);
         }
+
 
     }
 }

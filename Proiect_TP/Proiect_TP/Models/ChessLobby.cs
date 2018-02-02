@@ -12,6 +12,7 @@ namespace Proiect_TP.Models
     {
         [Key, Required]
         public Guid Id { get; set; }
+        public String Turn { get; set; }
         public Guid gameGUID { get; set; }
         public Guid user1GUID { get; set; }
         public Guid user2GUID { get; set; }

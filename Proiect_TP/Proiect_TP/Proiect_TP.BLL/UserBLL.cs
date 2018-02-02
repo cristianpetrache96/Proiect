@@ -31,5 +31,9 @@ namespace Proiect_TP.BLL
         {
             return userDAL.CheckPassword(name, pass);
         }
+        internal User GetUserById(Guid Id)
+        {
+            return userDAL.GetUserById(Id);
+        }
     }
 }

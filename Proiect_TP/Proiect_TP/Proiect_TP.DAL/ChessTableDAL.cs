@@ -9,6 +9,7 @@ namespace Proiect_TP.Proiect_TP.DAL
 {
     public class ChessTableDAL
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ContextTable _context = new ContextTable();
 
         public bool addTable(ChessBoard cb)
@@ -24,7 +25,7 @@ namespace Proiect_TP.Proiect_TP.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                log.Info(ex.InnerException);
                 return false;
             }
         }
@@ -39,7 +40,7 @@ namespace Proiect_TP.Proiect_TP.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+               log.Info(ex.InnerException);
                 return null;
             }
         }
@@ -54,7 +55,7 @@ namespace Proiect_TP.Proiect_TP.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                log.Info(ex.InnerException);
                 return new Guid();
             }
         }
@@ -76,7 +77,7 @@ namespace Proiect_TP.Proiect_TP.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                log.Info(ex.InnerException);
                 return false;
             }
         }
@@ -166,10 +167,6 @@ namespace Proiect_TP.Proiect_TP.DAL
             Cell cell = new Cell();
             ChessBoard board = new ChessBoard();
             List<int> rowAndCol = board.RowAndColFromCellKey(key);
-       
-            
-
-
 
             if (cellString =="whiteRook")
                 cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Rook),rowAndCol[0],rowAndCol[1]);
@@ -185,17 +182,17 @@ namespace Proiect_TP.Proiect_TP.DAL
                 cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Pawn), rowAndCol[0], rowAndCol[1]);
 
             if (cellString == "blackRook")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Rook),rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.Rook),rowAndCol[0], rowAndCol[1]);
             if (cellString == "blackBishop")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Bishop), rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.Bishop), rowAndCol[0], rowAndCol[1]);
             if (cellString == "blackKnight")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Knight), rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.Knight), rowAndCol[0], rowAndCol[1]);
             if (cellString == "blackKing")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.King), rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.King), rowAndCol[0], rowAndCol[1]);
             if (cellString == "blackQueen")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Queen), rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.Queen), rowAndCol[0], rowAndCol[1]);
             if (cellString == "blackPawn")
-                cell = new Cell(new Piece(new Side(Side.SideType.White), Piece.PieceType.Pawn), rowAndCol[0], rowAndCol[1]);
+                cell = new Cell(new Piece(new Side(Side.SideType.Black), Piece.PieceType.Pawn), rowAndCol[0], rowAndCol[1]);
             if (cellString == "")
                 cell = new Cell(rowAndCol[0], rowAndCol[1]);
             return cell;
