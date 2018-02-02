@@ -30,7 +30,11 @@ namespace Proiect_TP.Controllers
             Session["ID"] = null;
             return RedirectToAction("Index", "Home");
         }
-
+        public ActionResult Index2(string id)
+        {
+            Console.Write(id);
+            return RedirectToAction("Index", "ChessGame");
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

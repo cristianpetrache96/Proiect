@@ -75,7 +75,7 @@
             @for (int j = 1; j <= 8; j++)
             {
                 <td id="td">
-                    <a id ="@i.ToString()+@j.ToString()" href="#" rel="table" onclick="location.href='@Url.Action("Index", "ChessGame",new { @linia = @i, @coloana = @j })'">
+                    <a id ="ID-celula@*@i.ToString()+@j.ToString()*@" href="#" rel="table" onclick="location.href='@Url.Action("Index2", "Home",new { id = @i.ToString()+","+j.ToString()})'">
                         @if (@Model.Board.GetCell(i, j) != null)
                         {
                             <img src=" @Model.Board.GetCell(i,j).Piece.ImagePath" />
