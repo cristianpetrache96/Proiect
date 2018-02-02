@@ -8,16 +8,24 @@ namespace Proiect_TP.Models
     public class Cell
     {
         Piece _piece;
-     
+        public int row, col;
 
+        public Cell(int row, int col)
+        {
+            this.row = row;
+            this.col = col;
+            _piece = new Piece();
+        }
 
         public Cell()
         {
             _piece = new Piece();
         }
 
-        public Cell(Piece piece)
+        public Cell(Piece piece,int i,int j)
         {
+            row = i;
+            col = j;
             _piece = piece;
         }
 
@@ -51,6 +59,16 @@ namespace Proiect_TP.Models
             if (IsEmpty())
                 return false;
             else return _piece.Side.SideTip == dest.Piece.Side.SideTip;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Cell o = (Cell)obj;
+            if (this.Piece.ImagePath == o.Piece.ImagePath && this.row == o.row && this.col == o.col )
+            {
+                return true;
+            }
+            else return false;
         }
     }
 }

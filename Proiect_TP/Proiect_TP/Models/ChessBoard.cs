@@ -11,66 +11,115 @@ namespace Proiect_TP.Models
     {
         private Side _whiteSide;
         private Side _blackSide;
-        private Hashtable _cells;
+        public  Hashtable _cells;
 
         public ChessBoard()
         {
             _cells = new Hashtable();
             _whiteSide = new Side(Side.SideType.White);
             _blackSide = new Side(Side.SideType.Black);
-            InitTable();
+            InitTable2();
 
         }
 
-        public void InitTable()
+        //public void InitTable()
+        //{
+        //    _cells.Clear();
+
+
+        //    string key;
+
+        //    for(char c ='a'; c<='h';c++)
+        //    {
+        //        for(int j=1;j<=8;j++)
+        //        {
+        //            key = c +""+j;
+        //            _cells.Add(key, new Cell());
+        //        }
+        //    }
+
+
+        //    _cells["a1"] = new Cell(new Piece(_whiteSide,Piece.PieceType.Rook));
+        //    _cells["h1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Rook));
+        //    _cells["b1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight));
+        //    _cells["g1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight));
+        //    _cells["c1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop));
+        //    _cells["f1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop));
+        //    _cells["d1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Queen));
+        //    _cells["e1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.King));
+        //    _cells["a2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["b2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["c2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["d2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["e2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["f2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["g2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+        //    _cells["h2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+
+        //    _cells["a8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook));
+        //    _cells["h8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook));
+        //    _cells["b8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight));
+        //    _cells["g8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight));
+        //    _cells["c8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop));
+        //    _cells["f8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop));
+        //    _cells["d8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Queen));
+        //    _cells["e8"] = new Cell(new Piece(_blackSide, Piece.PieceType.King));
+        //    _cells["a7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["b7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["c7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["d7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["e7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["f7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["g7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //    _cells["h7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+        //}
+
+        public void InitTable2()
         {
             _cells.Clear();
 
-
-            string key;
-
-            for(char c ='a'; c<='h';c++)
+            for (int i = 1; i <= 8; i++)
             {
-                for(int j=1;j<=8;j++)
+                for (int j = 1; j <= 8; j++)
                 {
-                    key = c +""+j;
-                    _cells.Add(key, new Cell());
+                    
+                    _cells.Add(CellKeyFromRowAndCol(i,j), new Cell(i,j));
                 }
             }
 
-            _cells["a1"] = new Cell(new Piece(_whiteSide,Piece.PieceType.Rook));
-            _cells["h1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Rook));
-            _cells["b1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight));
-            _cells["g1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight));
-            _cells["c1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop));
-            _cells["f1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop));
-            _cells["d1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Queen));
-            _cells["e1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.King));
-            _cells["a2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["b2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["c2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["d2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["e2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["f2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["g2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
-            _cells["h2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn));
+            _cells["a1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Rook),1,1);
+            _cells["h1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Rook),8,1);
+            _cells["b1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight),2,1);
+            _cells["g1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Knight),7,1);
+            _cells["c1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop),3,1);
+            _cells["f1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Bishop), 6, 1);
+            _cells["d1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Queen), 4, 1);
+            _cells["e1"] = new Cell(new Piece(_whiteSide, Piece.PieceType.King), 5, 1);
+            _cells["a2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),1,2);
+            _cells["b2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),2,2);
+            _cells["c2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),3,2);
+            _cells["d2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),4,2);
+            _cells["e2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),5,2);
+            _cells["f2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),6,2);
+            _cells["g2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),7,2);
+            _cells["h2"] = new Cell(new Piece(_whiteSide, Piece.PieceType.Pawn),8,2);
 
-            _cells["a8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook));
-            _cells["h8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook));
-            _cells["b8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight));
-            _cells["g8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight));
-            _cells["c8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop));
-            _cells["f8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop));
-            _cells["d8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Queen));
-            _cells["e8"] = new Cell(new Piece(_blackSide, Piece.PieceType.King));
-            _cells["a7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["b7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["c7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["d7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["e7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["f7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["g7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
-            _cells["h7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn));
+            _cells["a8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook),1,8);
+            _cells["h8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Rook),8,8);
+            _cells["b8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight),2,8);
+            _cells["g8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Knight),7,8);
+            _cells["c8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop),3,8);
+            _cells["f8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Bishop),6,8);
+            _cells["d8"] = new Cell(new Piece(_blackSide, Piece.PieceType.Queen),4,8);
+            _cells["e8"] = new Cell(new Piece(_blackSide, Piece.PieceType.King),5,8);
+            _cells["a7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),1,7);
+            _cells["b7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),2,7);
+            _cells["c7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),3,7);
+            _cells["d7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),4,7);
+            _cells["e7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),5,7);
+            _cells["f7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),6,7);
+            _cells["g7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),7,7);
+            _cells["h7"] = new Cell(new Piece(_blackSide, Piece.PieceType.Pawn),8,7);
         }
 
         public void AddCell(string key,Cell newCell)
@@ -79,10 +128,16 @@ namespace Proiect_TP.Models
 
         }
 
+        public void UpdateCell(string key,Cell newCell)
+        {
+            _cells[key] = newCell;
+        }
 
         public string GetKey(Cell cell)
         {
-            return _cells.Keys.OfType<String>().FirstOrDefault(s => _cells[s] == cell);
+            if (cell.Equals(_cells["a2"]))
+                Console.WriteLine("asfas");
+            return _cells.Keys.OfType<String>().FirstOrDefault(s => _cells[s].Equals(cell));
         }
 
         public Cell GetCell(string key)
@@ -104,7 +159,7 @@ namespace Proiect_TP.Models
         {
             List<int> rowAndCol = new List<int>();
 
-            int col = char.Parse(key.Substring(0, 1).ToUpper()) - 64; 
+           int col = char.Parse(key.Substring(0, 1).ToUpper()) - 64; 
             int row = int.Parse(key.Substring(1, 1));
             rowAndCol.Add(row);
             rowAndCol.Add(col);
@@ -145,7 +200,7 @@ namespace Proiect_TP.Models
         public Cell GetTopCell(Cell sourceCell)
         {
             string key = GetKey(sourceCell);
-    
+            
             List<int> rowAndCol = RowAndColFromCellKey(key);
             int row = rowAndCol[0];
             int col = rowAndCol[1];
@@ -252,9 +307,25 @@ namespace Proiect_TP.Models
 
         public void ClearTable()
         {
-            _cells.Clear();
 
+            _cells.Clear();
  
+        }
+
+        public Hashtable RemoveKeys()
+        {
+            string key;
+
+            for (char c = 'a'; c <= 'h'; c++)
+            {
+                for (int j = 1; j <= 8; j++)
+                {
+                    key = c + "" + j;
+                    _cells.Remove(key);
+                }
+            }
+
+            return _cells;
         }
 
         public ChessTable GetTable()

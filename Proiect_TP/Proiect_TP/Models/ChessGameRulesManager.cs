@@ -20,7 +20,7 @@ namespace Proiect_TP.Models
 
             Cell possibleDestination;
 
-            if(source.Piece.Side.SideTip ==Side.SideType.White)
+            if(source.Piece.Side.SideTip ==Side.SideType.Black)
             {
                 possibleDestination = _board.GetTopCell(source);
                 if (possibleDestination != null && possibleDestination.IsEmpty())
@@ -393,11 +393,13 @@ namespace Proiect_TP.Models
             
         }
 
-        public void ExecuteMove(PieceMove move)
+        public ChessBoard ExecuteMove(PieceMove move)
         {
             _board.GetCell(_board.GetKey(move.StartCell)).Piece.NumberOfMoves++;
             _board.GetCell(_board.GetKey(move.EndCell)).Piece = _board.GetCell(_board.GetKey(move.StartCell)).Piece;
             _board.GetCell(_board.GetKey(move.StartCell)).Piece = new Piece(move.StartCell.Piece.Side, Piece.PieceType.Empty);
+
+            return _board;
         }
 
         public void UndoMove(PieceMove move)
@@ -467,5 +469,16 @@ namespace Proiect_TP.Models
 
             return possibleMoves;
         }
+
+        public bool IsValidMove(string dest, List<string>possibleMoves)
+        {
+            bool ok = false;
+
+            if (possibleMoves.Contains(dest))
+                ok = true;
+
+            return ok;
+        }
+
     }
 }

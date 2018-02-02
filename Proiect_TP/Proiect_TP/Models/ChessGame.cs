@@ -74,6 +74,10 @@ namespace Proiect_TP.Models
             {
                 return _chessBoard;
             }
+            set
+            {
+                this._chessBoard = value;
+            }
         }
 
         public ChessGameRulesManager RulesManager
